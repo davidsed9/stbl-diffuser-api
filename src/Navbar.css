@@ -1,0 +1,70 @@
+body {
+    background: white;
+    padding: 0;
+  }
+  
+  .Navbar {
+    font-family: cursive;
+    text-align: center;
+    background-color: lightgray;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    display: flex;
+  }
+  
+  .Navbar * {
+    box-sizing: border-box;
+    transition: all .35s ease;
+  }
+  
+  .Navbar li {
+    display: inline-block;
+    list-style: outside none none;
+    margin: .5em 1em;
+    padding: 0;
+  }
+  
+  .Navbar a {
+    padding: .5em .8em;
+    color:  black;
+    position: relative;
+    text-decoration: none;
+    font-size: 20px;
+  }
+  
+  .Navbar a::before,
+  .Navbar a::after {
+    content: '';
+    height: 14px;
+    width: 14px;
+    position: absolute;
+    transition: all .35s ease;
+    opacity: 0;
+  }
+  
+  .Navbar a::before {
+    content: '';
+    right: 0;
+    top: 0;
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    transform: translate(-100%, 50%);
+  }
+  
+  .Navbar a:after {
+    content: '';
+    left: 0;
+    bottom: 0;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    transform: translate(100%, -50%)
+  }
+  
+  .Navbar a:hover:before,
+  .Navbar a:hover:after{
+    transform: translate(0,0);
+    opacity: 1;
+  }
+  
+  .Navbar a:hover {
+    color: gray;
+  }
