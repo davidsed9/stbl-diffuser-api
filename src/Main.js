@@ -1,11 +1,11 @@
 import React from 'react'
 import "./Main.css"
 
-function Main() {
+function Main({ label, setAttribute}) {
   return (
     <><div className='label-input-pair'>
-          <label className='label'>Empieza a crear :</label>
-          <input className='main-input' />
+          <label className='label'>{label}:</label>
+          <input className='main-input' onChange={e => setAttribute(e.target.value)} />
       </div>
       </>
   );
