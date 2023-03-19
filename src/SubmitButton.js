@@ -10,7 +10,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 library.add(faCheck);
 
 
-function SubmitButton() {
+function SubmitButton({ onSubmit }) {
   const [showCheck, setShowCheck] = useState(false);
 
   function handleClick() {
@@ -20,6 +20,7 @@ function SubmitButton() {
       $("#button").removeClass("onclic");
       $("#button").addClass("validate");
       setShowCheck(true)
+      onSubmit();
     }, 2250);
 
     setTimeout(function () {
