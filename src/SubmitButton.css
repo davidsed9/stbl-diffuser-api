@@ -1,58 +1,93 @@
-    main {
-    height: 100vh;
-    width: 100vw;
+:root {
+  --green: #1ECD97;
+  --gray: #bbbbbb;
+}
+
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -65px;
+  margin-top: -20px;
+  width: 130px;
+  height: 40px;
+  text-align: center;
+}
+
+button {
+  outline: none;
+  height: 40px;
+  text-align: center;
+  width: 130px;
+  border-radius: 40px;
+  background: #fff;
+  border: 2px solid var(--green);
+  color: var(--green);
+  letter-spacing: 1px;
+  text-shadow: 0;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+button:hover {
+  color: white;
+  background: var(--green);
+}
+
+button:active {
+  letter-spacing: 2px;
+}
+
+button:after {
+  content: "SUBMIT";
+}
+
+.onclic {
+  width: 40px;
+  border-color: var(--gray);
+  border-width: 3px;
+  font-size: 0;
+  border-left-color: var(--green);
+  animation: rotating 2s 0.25s linear infinite;
+}
+
+.onclic:after {
+  content: "";
+}
+
+.onclic:hover {
+  color: var(--green);
+  background: white;
+}
+
+.validate {
+  font-size: 13px;
+  color: white;
+  background: var(--green);
+}
+
+.validate:after {
+  display: none;
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  content: "\f00c";
+}
+
+.validate .check-icon {
+  display: inline-block;
+}
+
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
   }
-  
-  .button {
-    background: #2B2D2F;
-    height: 80px;
-    width: 200px;
-    text-align: center;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    cursor: pointer;
-    border-radius: 4px;
+  to {
+    transform: rotate(360deg);
   }
-  
-  .text {
-    font: bold 1.25rem/1 poppins;
-    color: #71DFBE;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-52%);
-    left: 0;
-    right: 0;
-  }
-  
-  .progress-bar {
-    position: absolute;
-    height: 10px;
-    width: 0;
-    right: 0;
-    top: 50%;
-    left: 50%;
-    border-radius: 200px;
-    transform: translateY(-50%) translateX(-50%);
-    background: lighten(#2B2D2F, 15%);
-  }
-  
-  svg {
-    width: 30px;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%) translateX(-50%);
-    left: 50%;
-    right: 0;
-  }
-  
-  .check {
-    fill: none;
-    stroke: #FFFFFF;
-    stroke-width: 3;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-  }
+}
