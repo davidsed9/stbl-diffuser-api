@@ -4,11 +4,15 @@ body {
   }
   
   .Navbar {
-    font-family: cursive;
+    font-family: sans-serif;
     text-align: center;
-    background-color: lightgray;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    background-color: white;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
     display: flex;
+  }
+  
+  .Navbar:hover{
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   }
   
   .Navbar * {

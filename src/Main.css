@@ -1,0 +1,36 @@
+.label-input-pair{
+margin-top: 18px;
+display: flex;
+justify-content: space-between;
+align-content: space-between;
+align-items: center;
+width: 350px;
+
+}
+
+.label-input-pair .main-input{
+    padding: 0 4px;
+    color: #fff;
+    font-size: 1rem;
+    box-shadow: 2px 4px 4px 2px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(4px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+
+
+.main-button {
+    margin-top: 38px;
+    font-size: 1rem;
+    color: black;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-weight: 500px;
+    position: relative;
+    outline: none;
+
+}

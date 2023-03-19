@@ -1,11 +1,15 @@
 import React from 'react'
+import Main from './Main'
 import Navbar from './Navbar'
-import "./App.css"
+import SubmitButton from './SubmitButton'
+
 
 function App() {
   return (
     <div>
       <Navbar />
+      <SubmitButton />
+      {/* <Main /> */}
     </div>
   )
 }
