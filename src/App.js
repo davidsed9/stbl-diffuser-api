@@ -35,8 +35,8 @@ const handleNumberChange = (value) => {
 
   return (
     <div className='App'>
-      {imageUrl && <img src={imageUrl} className="image" alt="ai image" />}
       <Navbar />
+      {imageUrl && <img src={imageUrl} className="image" alt="ai image" />}
        <Main label={"Empieza a Crear"} setAttribute={setUserPrompt}/>
        <Main label={"Numero de Fotos"} setAttribute={handleNumberChange}/>
        <Main label={"Tamaño"} setAttribute={setSize}/>
